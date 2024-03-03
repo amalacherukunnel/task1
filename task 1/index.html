@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Children's Cartoons Web Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="cartoonsApp" ng-controller="CartoonsController as ctrl">
+  <div class="container">
+    <h1>Children's Cartoons Web Application</h1>
+    <div ng-repeat="cartoon in ctrl.cartoons">
+      <div class="cartoon-card">
+        <img ng-src="{{cartoon.image}}" alt="{{cartoon.title}}">
+        <h2>{{cartoon.title}}</h2>
+        <p>{{cartoon.description}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AngularJS scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
